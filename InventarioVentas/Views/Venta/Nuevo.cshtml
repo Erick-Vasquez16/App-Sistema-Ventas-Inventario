@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model InventarioVentas.Models.Venta;
+<div class="row">
+    <div class="col-sm-8 offset-2">
+        <h2>Nueva Venta</h2>
+        <form asp-controller="Venta" asp-action="Nuevo" method="post">
+            <div class="mb-3">
+                <label for="Id Producto">Selecciona el ID del Producto</label>
+                <select class="form-control" asp-for="IdProducto" asp-items="ViewBag.Producto">
+                    <option value="">Seleccionar Grado</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="Nombre Producto">Selecciona el Nommbre del Producto</label>
+                <select class="form-control" asp-for="NombreProducto" asp-items="ViewBag.NombreProducto">
+                    <option value="">Seleccionar Producto</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label>Fecha</label>
+                <input class="form-control" asp-for="Fecha" type="date" />
+            </div>
+            <div class="mb-3">
+                <label>Precio Producto</label>
+                <input class="form-control" asp-for="PrecioProducto" type="number" id="precioProducto" oninput="calcularTotal()" />
+            </div>
+            <div class="mb-3">
+                <label>Cantidad</label>
+                <input class="form-control" asp-for="Cantidad" type="number" id="cantidadProducto" oninput="calcularTotal()" />
+            </div>
+            <div class="mb-3">
+                <label>Total</label>
+                <input class="form-control" asp-for="Total" type="number" id="totalProducto" readonly />
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" type="submit">Guardar</button>
+                <a asp-controller="Venta" asp-action="Lista" class="btn btn-warning">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function calcularTotal() {
+        // Obtener los valores de precio y cantidad
+        let precio = parseFloat(document.getElementById('precioProducto').value) || 0;
+        let cantidad = parseFloat(document.getElementById('cantidadProducto').value) || 0;
+
+        // Calcular el total
+        let total = precio * cantidad;
+
+        // Asignar el total al campo de total
+        document.getElementById('totalProducto').value = total.toFixed(2);
+    }
+</script>

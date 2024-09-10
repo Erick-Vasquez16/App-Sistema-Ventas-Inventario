@@ -1,0 +1,182 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<InventarioVentas.Models.Venta>;
+
+<div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <h2>Lista de Ventas</h2>
+        <a asp-controller="Venta" asp-action="Nuevo" class="btn btn-success">Nueva Venta</a>
+
+        <!-- Formulario de filtro por fecha -->
+        <div class="row mt-3">
+            <div class="col-sm-12">
+                <form id="filterForm" onsubmit="return false;">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <input type="date" id="fechaInicio" class="form-control" placeholder="Fecha Inicio" />
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="date" id="fechaFin" class="form-control" placeholder="Fecha Fin" />
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" class="btn btn-primary" onclick="filtrar()">Filtrar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tabla de ventas -->
+        <table class="table table-bordered mt-3" id="ventasTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Id Producto</th>
+                    <th>Nombre</th>
+                    <th>Fecha</th>
+                    <th>Precio Producto</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.IdVenta</td>
+                        <td>@item.IdProducto</td>
+                        <td>@item.NombreProducto</td>
+                        <td>@item.Fecha.ToString("yyyy-MM-dd")</td> <!-- Cambié el formato aquí -->
+                        <td>@item.PrecioProducto</td>
+                        <td>@item.Cantidad</td>
+                        <td>@item.Total</td>
+                        <td>
+                            <a asp-controller="Venta" asp-action="Editar" asp-route-id="@item.IdVenta" class="btn btn-primary">Editar</a>
+                            <a asp-controller="Venta" asp-action="Eliminar" asp-route-id="@item.IdVenta" onclick="return confirmar()" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <!-- Controles de paginación -->
+        <nav>
+            <ul class="pagination" id="pagination">
+                <!-- Los botones de paginación serán generados dinámicamente -->
+            </ul>
+        </nav>
+    </div>
+</div>
+<script>
+    // Variables globales
+    let ventas = [];
+    const pageSize = 10;
+    let currentPage = 1;
+
+    // Al cargar la página, guarda los datos en un array
+    $(document).ready(function () {
+        // Guardar todas las ventas en un array
+        $('#ventasTable tbody tr').each(function () {
+            let venta = {
+                id: $(this).find('td').eq(0).text(),
+                idProducto: $(this).find('td').eq(1).text(),
+                nombreProducto: $(this).find('td').eq(2).text(),
+                fecha: $(this).find('td').eq(3).text(),
+                precioProducto: $(this).find('td').eq(4).text(),
+                cantidad: $(this).find('td').eq(5).text(),
+                total: $(this).find('td').eq(6).text(),
+                acciones: $(this).find('td').eq(7).html()
+            };
+            ventas.push(venta);
+        });
+
+        // Renderizar la primera página
+        renderPage(ventas);
+    });
+
+    // Función para filtrar las ventas
+    function filtrar() {
+        let fechaInicio = $('#fechaInicio').val();
+        let fechaFin = $('#fechaFin').val();
+
+        let ventasFiltradas = ventas.filter(function (venta) {
+            let fechaVenta = new Date(venta.fecha);
+            let desde = fechaInicio ? new Date(fechaInicio) : null;
+            let hasta = fechaFin ? new Date(fechaFin) : null;
+
+            // Convertir fechas a formato comparable (yyyy-mm-dd)
+            let fechaVentaStr = fechaVenta.toISOString().split('T')[0]; // yyyy-mm-dd
+            let desdeStr = desde ? desde.toISOString().split('T')[0] : null;
+            let hastaStr = hasta ? hasta.toISOString().split('T')[0] : null;
+
+            if (desdeStr && fechaVentaStr < desdeStr) return false;
+            if (hastaStr && fechaVentaStr > hastaStr) return false;
+
+            return true;
+        });
+
+        // Reiniciar la paginación
+        currentPage = 1;
+        renderPage(ventasFiltradas);
+    }
+
+    // Función para renderizar una página
+    function renderPage(data) {
+        let totalPages = Math.ceil(data.length / pageSize);
+        let start = (currentPage - 1) * pageSize;
+        let end = start + pageSize;
+        let paginatedData = data.slice(start, end);
+
+        // Limpiar la tabla
+        $('#ventasTable tbody').empty();
+
+        // Verificar si hay datos para mostrar
+        if (paginatedData.length === 0) {
+            $('#ventasTable tbody').append('<tr><td colspan="8" class="text-center">No hay datos disponibles</td></tr>');
+        } else {
+            // Renderizar las filas
+            paginatedData.forEach(function (venta) {
+                let row = `<tr>
+                                <td>${venta.id}</td>
+                                <td>${venta.idProducto}</td>
+                                <td>${venta.nombreProducto}</td>
+                                <td>${venta.fecha}</td>
+                                <td>${venta.precioProducto}</td>
+                                <td>${venta.cantidad}</td>
+                                <td>${venta.total}</td>
+                                <td>${venta.acciones}</td>
+                               </tr>`;
+                $('#ventasTable tbody').append(row);
+            });
+        }
+
+        // Renderizar la paginación
+        renderPagination(totalPages);
+    }
+
+    // Función para generar los controles de paginación
+    function renderPagination(totalPages) {
+        $('#pagination').empty();
+
+        for (let i = 1; i <= totalPages; i++) {
+            let activeClass = i === currentPage ? 'active' : '';
+            let pageItem = `<li class="page-item ${activeClass}">
+                                    <a href="#" class="page-link" onclick="goToPage(${i})">${i}</a>
+                                </li>`;
+            $('#pagination').append(pageItem);
+        }
+    }
+
+    // Función para cambiar de página
+    function goToPage(page) {
+        currentPage = page;
+        filtrar(); // Aplicar el filtro de nuevo para asegurarse de que se rendericen los datos filtrados
+    }
+</script>
+
+
+

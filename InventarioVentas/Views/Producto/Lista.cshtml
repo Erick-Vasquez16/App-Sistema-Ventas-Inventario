@@ -1,0 +1,70 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<InventarioVentas.Models.Producto>;
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <h2>Lista de Productos</h2>
+        <a asp-controller="Producto" asp-action="Nuevo" class="btn btn-success">Nuevo Producto</a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Marca</th>
+                    <th>Tipo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.IdProducto</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Descripcion</td>
+                        <td>@item.Marca</td>
+                        <td>@item.Tipo</td>
+                        <td>
+                            <a asp-controller="Producto" asp-action="Editar" asp-route-id="@item.IdProducto" class="btn btn-primary">Editar</a>
+                            <a asp-controller="Producto" asp-action="Eliminar" asp-route-id="@item.IdProducto" onclick="return confirmar()" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function confirmar(event, idProducto) {
+            event.preventDefault(); // Prevenir que el enlace se ejecute inmediatamente
+
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "No podrás revertir esta acción.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sí, eliminarlo!',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Si el usuario confirma, redirige a la URL de eliminación
+                    window.location.href = '/Producto/Eliminar/' + idProducto;
+                }
+            })
+        }
+    </script>
+
+
+
+}
