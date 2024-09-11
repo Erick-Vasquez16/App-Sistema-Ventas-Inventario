@@ -1,5 +1,7 @@
 ﻿using InventarioVentas.Data;
+using InventarioVentas.Extensions;
 using InventarioVentas.Models;
+using InventarioVentas.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -15,12 +17,53 @@ namespace InventarioVentas.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Lista()
+        public async Task<IActionResult> Lista(DateOnly? fechaInicio, DateOnly? fechaFin, int page = 1, int pageSize = 10)
         {
-            List<Venta> lista = await _appDbContext.Ventas.ToListAsync();
-            return View(lista);
+            var viewModel = await ObtenerVentasConPaginacionYFiltrado(fechaInicio, fechaFin, page, pageSize);
+            return View(viewModel);
         }
+        // Método privado para obtener ventas con filtrado y paginación
+        private async Task<VentaViewModel> ObtenerVentasConPaginacionYFiltrado(DateOnly? fechaInicio, DateOnly? fechaFin, int page, int pageSize)
+        {
+            var query = _appDbContext.Ventas.AsQueryable();
 
+            // Filtrado por fecha usando DateOnly convertido a DateTime
+            if (fechaInicio.HasValue)
+            {
+                var fechaInicioDateTime = fechaInicio.Value.ToDateTime();
+                query = query.Where(v => v.Fecha >= fechaInicioDateTime);
+            }
+
+            if (fechaFin.HasValue)
+            {
+                var fechaFinDateTime = fechaFin.Value.ToDateTime().AddDays(1).AddTicks(-1); // Para incluir el final del día
+                query = query.Where(v => v.Fecha <= fechaFinDateTime);
+            }
+
+            // Conteo total para la paginación
+            var totalItems = await query.CountAsync();
+
+            // Paginación
+            var ventas = await query
+                .OrderBy(v => v.Fecha)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            // Creación del ViewModel
+            return new VentaViewModel
+            {
+                Ventas = ventas,
+                Pagination = new PaginationViewModel
+                {
+                    CurrentPage = page,
+                    PageSize = pageSize,
+                    TotalItems = totalItems
+                },
+                FechaInicio = fechaInicio,
+                FechaFin = fechaFin
+            };
+        }
         [HttpGet]
         public IActionResult Nuevo()
         {

@@ -1,4 +1,3 @@
-using CurrieTechnologies.Razor.SweetAlert2;
 using InventarioVentas.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,8 +10,6 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDBContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaSQL"));
 });
- //para sweetalert
-builder.Services.AddSweetAlert2();
 
 var app = builder.Build();
 
