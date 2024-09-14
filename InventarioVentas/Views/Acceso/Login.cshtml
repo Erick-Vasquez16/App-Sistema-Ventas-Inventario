@@ -1,0 +1,54 @@
+﻿@model InventarioVentas.ViewModel.LoginVM
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/login.css" rel="stylesheet" />
+    <link href="~/css/backgroud.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-sm-6 col-md-4">
+                <div class="card login-card">
+                    <div class="card-header login-card-header">
+                        Iniciar Sesión
+                    </div>
+                    <div class="card-body p-4">
+                        <form asp-controller="Acceso" asp-action="Login" method="post">
+                            <div class="mb-3">
+                                <input class="form-control" type="text" placeholder="Nombre Usuario" required asp-for="NombreUsuario" aria-label="Correo electrónico" />
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control" type="password" placeholder="Contraseña" required asp-for="Password" aria-label="Contraseña" />
+                            </div>
+                            <div class="d-grid gap-2 mb-3">
+                                <button class="btn btn-primary btn-block" type="submit">Ingresar</button>
+                            </div>
+                            @if (ViewData["Mensaje"] != null)
+                            {
+                                <div class="alert alert-danger" role="alert">
+                                    @ViewData["Mensaje"]
+                                </div>
+                            }
+                            <div class="register-link">
+                                ¿No tienes una cuenta? <a href="@Url.Action("Registro", "Acceso")">Registrarse</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

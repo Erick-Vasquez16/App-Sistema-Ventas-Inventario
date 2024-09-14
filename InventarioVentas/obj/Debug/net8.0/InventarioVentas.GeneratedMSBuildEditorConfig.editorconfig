@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Ozwal\OneDrive\Desktop\C#\App-Sistema-Ventas-Inventario\InventarioVentas
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Ozwal/OneDrive/Desktop/C\#/App-Sistema-Ventas-Inventario/InventarioVentas/Views/Acceso/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ozwal/OneDrive/Desktop/C\#/App-Sistema-Ventas-Inventario/InventarioVentas/Views/Acceso/Registro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvXFJlZ2lzdHJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Ozwal/OneDrive/Desktop/C\#/App-Sistema-Ventas-Inventario/InventarioVentas/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -56,6 +64,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Ozwal/OneDrive/Desktop/C\#/App-Sistema-Ventas-Inventario/InventarioVentas/Views/Venta/Nuevo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcTnVldm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ozwal/OneDrive/Desktop/C\#/App-Sistema-Ventas-Inventario/InventarioVentas/Views/Venta/TotalVendido.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcVG90YWxWZW5kaWRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Ozwal/OneDrive/Desktop/C\#/App-Sistema-Ventas-Inventario/InventarioVentas/Views/_ViewImports.cshtml]

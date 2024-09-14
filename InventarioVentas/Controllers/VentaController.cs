@@ -2,12 +2,15 @@
 using InventarioVentas.Extensions;
 using InventarioVentas.Models;
 using InventarioVentas.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace InventarioVentas.Controllers
 {
+    [Authorize]
+
     public class VentaController : Controller
     {
         private readonly AppDBContext _appDbContext;
@@ -107,5 +110,34 @@ namespace InventarioVentas.Controllers
             await _appDbContext.SaveChangesAsync();
             return RedirectToAction(nameof(Lista));
         }
+
+        // Método para la vista de TotalVendido
+        public IActionResult TotalVendido(DateTime? fechaInicio, DateTime? fechaFin)
+        {
+            var ventasFiltradas = new List<Venta>(); // Inicializa una lista vacía de ventas
+            decimal totalVendido = 0;
+
+            if (fechaInicio != null)
+            {
+                // Filtra las ventas por la fecha especificada
+                ventasFiltradas = _appDbContext.Ventas
+                    .Where(v => v.Fecha.Date == fechaInicio.Value.Date)
+                    .ToList();
+
+                // Calcula el total vendido
+                totalVendido = ventasFiltradas.Sum(v => v.Total);
+            }
+
+            var viewModel = new VentaTotalViewModel
+            {
+                Ventas = ventasFiltradas,
+                FechaInicio = fechaInicio,
+                TotalVendido = totalVendido
+            };
+
+            return View(viewModel); // Devuelve la vista TotalVendido
+        }
     }
+
 }
+

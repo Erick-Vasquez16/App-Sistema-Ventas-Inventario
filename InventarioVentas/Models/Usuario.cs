@@ -3,8 +3,8 @@
     public class Usuario
     {
         public int IdUsuario { get; set; }
-        public int NombreCompleto { get; set; }
-        public int NombreUsuario { get; set; }
-        public int Password { get; set; }
+        public string NombreCompleto { get; set; }
+        public string NombreUsuario { get; set; }
+        public string Password { get; set; }
     }
 }

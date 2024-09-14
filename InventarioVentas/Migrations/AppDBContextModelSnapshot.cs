@@ -63,16 +63,20 @@ namespace InventarioVentas.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdUsuario"));
 
-                    b.Property<int>("NombreCompleto")
+                    b.Property<string>("NombreCompleto")
+                        .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("int");
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("NombreUsuario")
+                    b.Property<string>("NombreUsuario")
+                        .IsRequired()
                         .HasMaxLength(20)
-                        .HasColumnType("int");
+                        .HasColumnType("nvarchar(20)");
 
-                    b.Property<int>("Password")
-                        .HasColumnType("int");
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.HasKey("IdUsuario");
 
@@ -101,11 +105,11 @@ namespace InventarioVentas.Migrations
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)");
 
-                    b.Property<double>("PrecioProducto")
-                        .HasColumnType("float");
+                    b.Property<decimal>("PrecioProducto")
+                        .HasColumnType("decimal(18, 2)");
 
-                    b.Property<double>("Total")
-                        .HasColumnType("float");
+                    b.Property<decimal>("Total")
+                        .HasColumnType("decimal(18, 2)");
 
                     b.HasKey("IdVenta");
 

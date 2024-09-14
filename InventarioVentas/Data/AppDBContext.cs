@@ -23,6 +23,7 @@ namespace InventarioVentas.Data
 
                 tb.Property(col => col.NombreCompleto).HasMaxLength(100);
                 tb.Property(col => col.NombreUsuario).HasMaxLength(20);
+                tb.Property(col => col.Password).HasMaxLength(500);
 
             });
 
@@ -55,6 +56,9 @@ namespace InventarioVentas.Data
                 tb.HasOne(v => v.producto)
                 .WithMany(p => p.ventas)
                 .HasForeignKey(v => v.IdProducto);
+
+                tb.Property(col => col.PrecioProducto).HasColumnType("decimal(18, 2)");
+                tb.Property(col => col.Total).HasColumnType("decimal(18, 2)");
 
             });
 

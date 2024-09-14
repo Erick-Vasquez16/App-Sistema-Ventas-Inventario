@@ -4,38 +4,62 @@
 @{
 }
 @model InventarioVentas.Models.Producto;
-<div class="row">
-    <div class="col-sm-8 offset-2">
-        <h2>Nuevo Producto</h2>
-        <form asp-controller="Producto" asp-action="Editar" method="post">
-            <input asp-for="IdProducto" type="hidden" />
-            <div class="mb-3">
-                <label>Nombre</label>
-                <input class="form-control" asp-for="Nombre" type="text" />
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+            <!-- Tarjeta para el formulario -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3>Editar Producto</h3>
+                </div>
+                <div class="card-body">
+                    <form id="editarProductoForm" asp-controller="Producto" asp-action="Editar" method="post">
+                        <input asp-for="IdProducto" type="hidden" />
+
+                        <!-- Campo de Nombre -->
+                        <div class="mb-3">
+                            <label asp-for="Nombre" class="form-label">Nombre del Producto</label>
+                            <input class="form-control" asp-for="Nombre" type="text" placeholder="Ingrese el nombre del producto" />
+                        </div>
+
+                        <!-- Campo de Descripción -->
+                        <div class="mb-3">
+                            <label asp-for="Descripcion" class="form-label">Descripción</label>
+                            <textarea class="form-control" asp-for="Descripcion" rows="3" placeholder="Ingrese una descripción"></textarea>
+                        </div>
+
+                        <!-- Campo de Marca -->
+                        <div class="mb-3">
+                            <label asp-for="Marca" class="form-label">Marca</label>
+                            <input class="form-control" asp-for="Marca" type="text" placeholder="Ingrese la marca del producto" />
+                        </div>
+
+                        <!-- Campo de Tipo de Producto -->
+                        <div class="mb-3">
+                            <label asp-for="Tipo" class="form-label">Tipo de Producto</label>
+                            <select class="form-select" asp-for="Tipo">
+                                <option value=""><strong>Seleccione un tipo</strong></option>
+                                <option value="Gorras">Gorras</option>
+                                <option value="Accesorios">Accesorios</option>
+                                <option value="Camisas">Camisas</option>
+                                <option value="Cinchos">Cinchos</option>
+                                <option value="Tacticos">Tacticos</option>
+                            </select>
+                        </div>
+
+                        <!-- Botones de acción -->
+                        <div class="d-flex justify-content-between mt-4">
+                            <button class="btn btn-success" type="button" onclick="mostrarAlertaGuardar()"><i class="fas fa-save"></i> Guardar</button>
+                            <a href="#" class="btn btn-secondary" onclick="confirmarVolver(event)"><i class="fas fa-arrow-left"></i> Volver</a>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="mb-3">
-                <label>Descripcion</label>
-                <input class="form-control" asp-for="Descripcion" type="text" />
-            </div>
-            <div class="mb-3">
-                <label>Marca</label>
-                <input class="form-control" asp-for="Marca" type="text" />
-            </div>
-            <div class="mb-3">
-                <label>Tipo de producto</label>
-                <select class="form-control" asp-for="Tipo">
-                    <option value=""> <strong> Seleccione una marca</strong></option>
-                    <option value="Gorras">Gorras</option>
-                    <option value="Accesorios">Accesorios</option>
-                    <option value="Camisas">Camisas</option>
-                    <option value="Cinchos">Cinchos</option>
-                    <option value="Tacticos">Tacticos</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <button class="btn btn-primary" type="submit">Guardar</button>
-                <a asp-controller="Producto" asp-action="Lista" class="btn btn-warning">Volver</a>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
+
+<!-- Incluir SweetAlert2 desde CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="~/js/alertproduct.js"></script>

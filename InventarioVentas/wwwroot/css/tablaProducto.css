@@ -1,0 +1,30 @@
+﻿.table-wrapper {
+    width: 100%;
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    overflow: auto;
+}
+
+    .table-wrapper table {
+        width: 100%;
+        border-collapse: collapse; /* Asegura que no haya espacios entre celdas */
+    }
+
+        .table-wrapper table thead {
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+            background-color: #343a40; /* Fondo del encabezado, cambia si es necesario */
+            color: #fff; /* Color del texto del encabezado */
+            z-index: 1; /* Asegura que el encabezado esté sobre el contenido */
+        }
+
+            .table-wrapper table thead th {
+                border: 1px solid #dee2e6; /* Color del borde del encabezado */
+                padding: 8px; /* Ajusta el padding según tus necesidades */
+            }
+
+        .table-wrapper table tbody td {
+            border: 1px solid #dee2e6; /* Color del borde de las celdas del cuerpo */
+            padding: 8px; /* Ajusta el padding según tus necesidades */
+            background-color: #fff; /* Fondo de las celdas */
+        }

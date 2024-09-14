@@ -1,0 +1,60 @@
+﻿@model InventarioVentas.ViewModel.UsuarioVM
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/registro.css" rel="stylesheet" />
+    <link href="~/css/backgroud.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-sm-6 col-md-4">
+                <div class="card register-card">
+                    <div class="card-header register-card-header">
+                        Registrarse
+                    </div>
+                    <div class="card-body p-4">
+                        <form asp-controller="Acceso" asp-action="Registro" method="post">
+                            <div class="mb-3">
+                                <input class="form-control" type="text" placeholder="Nombre Completo" required asp-for="NombreCompleto" aria-label="Nombre Completo" />
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control" type="text" placeholder="Nombre de Usuario" required asp-for="NombreUsuario" aria-label="Nombre de Usuario" />
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control" type="password" placeholder="Contraseña" required asp-for="Password" aria-label="Contraseña" />
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control" type="password" placeholder="Confirmar Contraseña" required asp-for="ConfirmarPassword" aria-label="Confirmar Contraseña" />
+                            </div>
+                            <div class="d-grid gap-2 mb-3">
+                                <button class="btn btn-primary btn-block" type="submit">Registrarse</button>
+                            </div>
+                            @if (ViewData["Mensaje"] != null)
+                            {
+                                <div class="alert alert-danger" role="alert">
+                                    @ViewData["Mensaje"]
+                                </div>
+                            }
+                            <div class="login-link">
+                                ¿Ya tienes una cuenta? <a href="@Url.Action("Login", "Acceso")">Iniciar sesión</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

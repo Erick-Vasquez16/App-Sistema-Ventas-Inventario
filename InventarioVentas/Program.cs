@@ -1,5 +1,6 @@
 using InventarioVentas.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,13 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDBContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaSQL"));
 });
+
+//configuracion para la sesion
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(
+    options => {
+        options.LoginPath = "/Acceso/Login";
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+    });
 
 var app = builder.Build();
 
@@ -24,8 +32,10 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.UseAuthorization();
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Acceso}/{action=Login}/{id?}");
 
 app.Run();

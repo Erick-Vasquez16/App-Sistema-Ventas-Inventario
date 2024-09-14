@@ -136,3 +136,4 @@ C:\Users\Ozwal\OneDrive\Desktop\C#\App-Sistema-Ventas-Inventario\InventarioVenta
 C:\Users\Ozwal\OneDrive\Desktop\C#\App-Sistema-Ventas-Inventario\InventarioVentas\obj\Debug\net8.0\InventarioVentas.pdb
 C:\Users\Ozwal\OneDrive\Desktop\C#\App-Sistema-Ventas-Inventario\InventarioVentas\obj\Debug\net8.0\InventarioVentas.genruntimeconfig.cache
 C:\Users\Ozwal\OneDrive\Desktop\C#\App-Sistema-Ventas-Inventario\InventarioVentas\obj\Debug\net8.0\ref\InventarioVentas.dll
+C:\Users\Ozwal\OneDrive\Desktop\C#\App-Sistema-Ventas-Inventario\InventarioVentas\bin\Debug\net8.0\BCrypt.Net-Next.dll

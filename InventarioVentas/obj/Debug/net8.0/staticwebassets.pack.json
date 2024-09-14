@@ -5,12 +5,32 @@
       "PackagePath": "staticwebassets\\InventarioVentas.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\css\\backgroud.css",
+      "PackagePath": "staticwebassets\\css\\backgroud.css"
+    },
+    {
+      "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\css\\registro.css",
+      "PackagePath": "staticwebassets\\css\\registro.css"
+    },
+    {
       "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\img\\f.jpg",
+      "PackagePath": "staticwebassets\\img\\f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\img\\fondo.jpg",
+      "PackagePath": "staticwebassets\\img\\fondo.jpg"
     },
     {
       "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\js\\site.js",
