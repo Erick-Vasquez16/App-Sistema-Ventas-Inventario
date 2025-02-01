@@ -1,12 +1,190 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|c:\\users\\ozwal\\onedrive\\desktop\\c#\\app-sistema-ventas-inventario\\inventarioventas\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|c:\\users\\ozwal\\onedrive\\desktop\\c#\\app-sistema-ventas-inventario\\inventarioventas\\views\\acceso\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|solutionrelative:views\\acceso\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|c:\\users\\ozwal\\onedrive\\desktop\\c#\\app-sistema-ventas-inventario\\inventarioventas\\controllers\\accesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|solutionrelative:controllers\\accesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|c:\\users\\ozwal\\onedrive\\desktop\\c#\\app-sistema-ventas-inventario\\inventarioventas\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|c:\\users\\ozwal\\onedrive\\desktop\\c#\\app-sistema-ventas-inventario\\inventarioventas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|c:\\users\\ozwal\\onedrive\\desktop\\c#\\app-sistema-ventas-inventario\\inventarioventas\\views\\acceso\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|solutionrelative:views\\acceso\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|c:\\users\\ozwal\\onedrive\\desktop\\c#\\app-sistema-ventas-inventario\\inventarioventas\\viewmodel\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|solutionrelative:viewmodel\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|c:\\users\\ozwal\\onedrive\\desktop\\c#\\app-sistema-ventas-inventario\\inventarioventas\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|c:\\users\\ozwal\\onedrive\\desktop\\c#\\app-sistema-ventas-inventario\\inventarioventas\\viewmodel\\usuariovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|solutionrelative:viewmodel\\usuariovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|c:\\users\\ozwal\\onedrive\\desktop\\c#\\app-sistema-ventas-inventario\\inventarioventas\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4C5C0F58-1C51-49B0-AC0D-C30FF83E0D05}|InventarioVentas.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T03:40:34.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADMAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-31T03:38:33.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Registro.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\Views\\Acceso\\Registro.cshtml",
+              "RelativeDocumentMoniker": "Views\\Acceso\\Registro.cshtml",
+              "ToolTip": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\Views\\Acceso\\Registro.cshtml",
+              "RelativeToolTip": "Views\\Acceso\\Registro.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-31T03:33:47.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\Views\\Acceso\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Acceso\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\Views\\Acceso\\Login.cshtml",
+              "RelativeToolTip": "Views\\Acceso\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-31T03:31:35.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginVM.cs",
+              "DocumentMoniker": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\ViewModel\\LoginVM.cs",
+              "RelativeDocumentMoniker": "ViewModel\\LoginVM.cs",
+              "ToolTip": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\ViewModel\\LoginVM.cs",
+              "RelativeToolTip": "ViewModel\\LoginVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T03:26:23.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T03:22:05.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsuarioVM.cs",
+              "DocumentMoniker": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\ViewModel\\UsuarioVM.cs",
+              "RelativeDocumentMoniker": "ViewModel\\UsuarioVM.cs",
+              "ToolTip": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\ViewModel\\UsuarioVM.cs",
+              "RelativeToolTip": "ViewModel\\UsuarioVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T03:21:43.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccesoController.cs",
+              "DocumentMoniker": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\Controllers\\AccesoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccesoController.cs",
+              "ToolTip": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\Controllers\\AccesoController.cs",
+              "RelativeToolTip": "Controllers\\AccesoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T03:14:35.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T15:25:35.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-18T15:20:25.459Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

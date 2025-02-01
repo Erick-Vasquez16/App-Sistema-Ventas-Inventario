@@ -71,7 +71,7 @@
                                             <a asp-controller="Venta" asp-action="Editar" asp-route-id="@item.IdVenta" class="btn btn-outline-primary btn-sm mx-1 rounded-pill">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <a asp-controller="Venta" asp-action="Eliminar" asp-route-id="@item.IdVenta" onclick="confirmar(event, '@Url.Action("Eliminar", "Venta", new { id = item.IdVenta })')" class="btn btn-outline-danger btn-sm mx-1 rounded-pill">
+                                            <a asp-controller="VentaController " asp-action="Eliminar" asp-route-id="@item.IdVenta" onclick="confirmar(event, '@Url.Action("Eliminar", "Venta", new { id = item.IdVenta })')" class="btn btn-outline-danger btn-sm mx-1 rounded-pill">
                                                 <i class="fas fa-trash-alt"></i>
                                             </a>
                                         </td>

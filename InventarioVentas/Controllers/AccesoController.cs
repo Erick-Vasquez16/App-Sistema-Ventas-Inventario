@@ -81,7 +81,7 @@ namespace InventarioVentas.Controllers
             // Si el usuario es encontrado y la contraseña es válida, configurar las claims
             List<Claim> claims = new List<Claim>() {
         new Claim(ClaimTypes.Name, usuario_encontrado.NombreCompleto)
-    };
+            };
 
             // Refrescar la sesión automáticamente
             ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);

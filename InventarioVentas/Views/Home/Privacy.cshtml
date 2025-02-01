@@ -1,6 +1,59 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Chatbot";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">Chatbot</h2>
+        </div>
+        <div class="card-body">
+            <form id="chatForm" method="post">
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Escribe tu mensaje:</label>
+                    <input type="text" id="mensaje" name="mensaje" class="form-control" placeholder="Escribe algo aquí..." />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="respuesta" class="mt-4 card shadow-lg">
+        <div class="card-header bg-secondary text-white">
+            <h4 class="mb-0">Respuesta del Chatbot:</h4>
+        </div>
+        <div class="card-body">
+            <p id="respuestaTexto" class="text-muted">Aquí se mostrará la respuesta.</p>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById("chatForm").addEventListener("submit", async function (event) {
+            event.preventDefault(); // Evita la recarga de la página
+
+            const mensaje = document.getElementById("mensaje").value;
+            if (!mensaje) {
+                alert("Por favor, escribe un mensaje.");
+                return;
+            }
+
+            const response = await fetch("/api/chatbot/consulta", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ mensaje: mensaje })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                document.getElementById("respuestaTexto").textContent = data.respuesta;
+            } else {
+                document.getElementById("respuestaTexto").textContent = `Error: ${data.error || "No se pudo procesar la solicitud"}`;
+            }
+        });
+    </script>
+}

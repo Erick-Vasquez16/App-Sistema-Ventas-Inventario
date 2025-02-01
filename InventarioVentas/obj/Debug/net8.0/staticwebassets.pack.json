@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\css\\tablaProducto.css",
+      "PackagePath": "staticwebassets\\css\\tablaProducto.css"
+    },
+    {
       "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -31,6 +35,22 @@
     {
       "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\img\\fondo.jpg",
       "PackagePath": "staticwebassets\\img\\fondo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\js\\alertEditarVenta.js",
+      "PackagePath": "staticwebassets\\js\\alertEditarVenta.js"
+    },
+    {
+      "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\js\\alertNewVenta.js",
+      "PackagePath": "staticwebassets\\js\\alertNewVenta.js"
+    },
+    {
+      "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\js\\alertProduct.js",
+      "PackagePath": "staticwebassets\\js\\alertProduct.js"
+    },
+    {
+      "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\js\\newProduct.js",
+      "PackagePath": "staticwebassets\\js\\newProduct.js"
     },
     {
       "Id": "C:\\Users\\Ozwal\\OneDrive\\Desktop\\C#\\App-Sistema-Ventas-Inventario\\InventarioVentas\\wwwroot\\js\\site.js",
